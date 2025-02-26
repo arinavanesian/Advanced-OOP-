@@ -1,0 +1,27 @@
+Lecture Java vs C++ vs Python
+
+Fraction class
+
+Python
+You can not instantiate more than one class constructors 
+in Python, only the def __init__
+
+Datatypes
+
+Access modifiers
+No private variables, only _self
+
+
+Tests
+Java has JUnit
+Python
+Pytest
+
+
+Getters & Setters
+
+Classes
+Using new
+C++(struct/public by default, classes/private by default)
+
+

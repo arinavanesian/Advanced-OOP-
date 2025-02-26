@@ -1,0 +1,69 @@
+#include <iostream>
+#include <string>
+
+// Document base class for an interface
+class Document {
+public:
+    virtual ~Document() = default; // Virtual destructor for proper cleanup
+    virtual void open() = 0; // Pure virtual function for opening the document
+};
+
+// WordDocument implementation
+class WordDocument : public Document {
+public:
+    // Concrete implementation of the open function
+    void open() override {
+        std::cout << "Opening Word document." << std::endl;
+    }
+};
+
+// ExcelDocument implementation
+class ExcelDocument : public Document {
+public:
+    // Concrete implementation of the open function
+    void open() override {
+        std::cout << "Opening Excel document." << std::endl;
+    }
+};
+
+// DocumentCreator base class for an interface
+class DocumentCreator {
+public:
+    virtual ~DocumentCreator() = default; // Virtual destructor for proper cleanup
+    virtual Document* createDocument() = 0; // Pure virtual function for creating a document
+};
+
+// WordDocumentCreator implementation
+class WordDocumentCreator : public DocumentCreator {
+public:
+    // Concrete implementation of the createDocument function for Word documents creation
+    Document* createDocument() override {
+        return new WordDocument();
+    }
+};
+
+// ExcelDocumentCreator implementation
+class ExcelDocumentCreator : public DocumentCreator {
+public:
+    // Concrete implementation of the createDocument function for Excel documents creation
+    Document* createDocument() override {
+        return new ExcelDocument();
+    }
+};
+
+int main() {
+    // Create a Word document using DocumentCreator pointer and open it
+    DocumentCreator* creator = new WordDocumentCreator();
+    Document* doc = creator->createDocument();
+    doc->open();
+
+    // Create an Excel document using DocumentCreator pointer and open it
+    creator = new ExcelDocumentCreator();
+    doc = creator->createDocument();
+    doc->open();
+
+    delete doc;
+    delete creator;
+
+    return 0;
+}
