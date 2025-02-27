@@ -15,16 +15,16 @@ public:
 	
 	}
 private:
-	string& name;
+	string name;
 	int age;
 };
 
-class ClassRoom{
-public:
-private:
-	const int CAPACITY = 10;
-	Student* room[CAPACITY];
-};
+// class ClassRoom{
+// public:
+// private:
+// 	const int CAPACITY = 10;
+// 	Student* room[CAPACITY];
+// };
 int main(){
 
 

@@ -7,7 +7,7 @@ public:
         Person(const string& fname, const string& lname):
                 fname(fname), lname(lname){}
         virtual void info(){
-                cout<<"Fname: "<<fname<<"/n"<<"Lname: "<<lname<<endl;
+                cout<<"Fname: "<<this.fname<<"/n"<<"Lname: "<<lname<<endl;
         }
         const string& getFname const(){
                 return fname;
