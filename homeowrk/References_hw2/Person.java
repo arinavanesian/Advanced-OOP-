@@ -1,8 +1,8 @@
 import java.lang.reflect.*;
 
 public class Person {
-    String name, surname;
-    int age, height, weight;
+    private String name, surname;
+    private int age, height, weight;
 
     // Correct constructor with no parameters
     public Person() {
@@ -44,8 +44,9 @@ public class Person {
 
     public static void main(String args[]) throws Exception {
      
+     
+        // get the class
         Class<?> c = Person.class;
-
         // Define the parameter types for the constructor
         Class<?>[] ar = new Class[]{String.class, String.class};
 

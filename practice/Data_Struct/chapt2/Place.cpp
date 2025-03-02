@@ -8,7 +8,8 @@ class State : public Region { public: virtual void printMe() { cout << "Ship it.
 class Maryland : public State  { public: virtual void printMe() { cout << "Read it.\n"; } };  
 int main() { 
     Region* mid = new State; 
-    State* md = new Maryland; Object* obj = new Place; 
+    State* md = new Maryland; 
+    Object* obj = new Place; 
     Place* usa = new Region; 
     md->printMe(); 
     mid->printMe(); 
