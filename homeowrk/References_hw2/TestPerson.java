@@ -40,7 +40,6 @@ public class TestPerson {
             else throw new IllegalArgumentException("Either 'int' or 'String' should have been assigned");
 
         }
-        // Get the method and invoke it
         Method method = n_class.getMethod(method_name, method_arg_Types);
         return method.invoke(obj, method_val);
 }
@@ -52,16 +51,37 @@ public class TestPerson {
     Object[] x = new Object[]{"Simon", "Baloian"};
     Object o = ctr.newInstance(x);
     System.out.println(o);
-    String[] constr_arg_Type = new String[]{"String", "String", "int", "int", "int"};
-    String[] constr_arg_value  = new String[]{"Armen", "Tatunts", "12", "21", "23"};
-    String cl_Name = "Person";
+//     String[] constr_arg_Type = new String[]{"String", "String", "int", "int", "int"};
+//     String[] constr_arg_value  = new String[]{"Armen", "Tatunts", "12", "21", "23"};
+//     Method[] ms = c.getDeclaredMethods(); 
+// for (int i = 0; i < ms.length; ++i)	{
+// 	String mname = ms[i].getName();
+// 	Class retType = ms[i].getReturnType();
+// 	System.out.print("Method : " + mname + " returns " + retType.getName() + "parameters : ( ");
+// 	Class[] params = ms[i].getParameterTypes();
+//  	for (int k = 0; k < params.length; ++k)	{
+// 		String paramType = params[k].getName();
+// 		System.out.print(paramType + " ");
+// 	}
+// 	System.out.println(") ");
+// }
+String className = "Person";
+String methodName = "addAge";
+String[] consArgTypes = {"String", "String", "int", "int", "int"};
+String[] consArgValues = {"Andrea", "Castillo", "60", "70", "168"};
+String[] methodArgTypes = {"int"};
+String[] methodArgValues = {"10"};
+
+    // String cl_Name = "Person";
     // Method addAgeMethod = c.getMethod("addAge", int.class);
     // addAgeMethod.invoke(o, 5); 
     // System.out.println(o);
-
+    // String class_Name = Class.forName("Person");
+    Object ob_method = perform(className, methodName,consArgTypes,consArgValues,methodArgTypes,methodArgValues);  
+    System.out.println(ob_method);  
     // Method changeNameMethod = c.getMethod("changeName", String.class, String.class);
     // changeNameMethod.invoke(o, "John", "Doe"); 
-    // System.out.println(o);
+    System.out.println(o);
 
     // ar = new Class[]{String.class, String.class, int.class, int.class, int.class};
     // ctr = c.getConstructor(ar);

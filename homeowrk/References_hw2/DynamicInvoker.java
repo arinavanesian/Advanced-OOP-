@@ -17,7 +17,7 @@ public class DynamicInvoker {
      * @return The result of the method invocation, or null if an error occurs.
      */
     public static Object perform(String class_name, String method_name, String[] cons_arg_types,
-                                 String[] cons_arg_values, String[] method_arg_types, String[] method_arg_values) {
+                                 String[] cons_arg_values, String[] method_arg_types, String[] method_arg_values) throws Exception{
         try {
             Class<?> clazz = Class.forName(class_name);
             Class<?>[] consParamTypes = new Class<?>[cons_arg_types.length];
@@ -53,7 +53,6 @@ public class DynamicInvoker {
                 }
             }
 
-            // Get the method and invoke it
             Method method = clazz.getMethod(method_name, methodParamTypes);
             return method.invoke(instance, methodArgs);
 
@@ -66,7 +65,6 @@ public class DynamicInvoker {
 
     public static void main(String[] args) throws Exception{
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Enter the class name: ");
         String className = scanner.nextLine();
 
@@ -96,14 +94,11 @@ public class DynamicInvoker {
         }
 
         Object result = perform(className, methodName, consArgTypes, consArgValues, methodArgTypes, methodArgValues);
-
-        // Print the result
         if (result != null) {
             System.out.println("Result: " + result);
         } else {
             System.out.println("No result or an error occurred.");
         }
-
         scanner.close();
     }
 }
