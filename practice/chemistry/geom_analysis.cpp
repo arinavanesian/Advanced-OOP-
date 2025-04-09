@@ -21,7 +21,7 @@
  * and the author assumes no liability for their reliability.               *
  *                                                                          *
  *                              Arin Avanoosyan                             *
- *                              Trent M. Parker                             *
+ *                                                                          *
  *                                 12/23/2015                               *
  *                                 C++ version                              *
  ****************************************************************************/
