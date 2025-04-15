@@ -1,0 +1,8 @@
+To run the program geom_analysis.cpp just run it regularly:
+```
+g++ geom_analysis.cpp -o geom 
+```
+Then choose a molecule from the xyzmolecules and run:
+```
+./geom molecule.xyz
+```
