@@ -1,0 +1,3 @@
+Run the program:
+g++ src/main.cpp src/Walker.cpp src/Body.cpp src/Segment.cpp -Iinclude -o OOCatcher -lsfml-graphics -lsfml-window -lsfml-system && ./OOCatcher
+

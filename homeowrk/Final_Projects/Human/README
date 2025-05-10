@@ -1,0 +1,2 @@
+Run these Commands in Terminal:
+g++ -std=c++17 -I include src/*.cpp -o OOCatcher -lsfml-graphics -lsfml-window -lsfml-system &&./OOCatcher

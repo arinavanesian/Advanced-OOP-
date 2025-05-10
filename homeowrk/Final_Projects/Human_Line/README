@@ -1,0 +1,18 @@
+//To run the numerical simulation of a human walker:
+//g++ main_.cpp Segment.cpp -o main_ && ./main_
+// ---Additional Information---
+
+// To Run the walker_ascii version:
+// g++ main.cpp Human.cpp BodyPart.cpp HumanBuilder.cpp Segment.cpp Point.h -o walker_ascii && ./walker_ascii
+
+
+// To Run the simple_walker version:
+//g++ main.cpp Segment.cpp Human.cpp HumanBuilder.cpp -o simple_walker && ./simple_walker  
+
+
+// To Run the simple_walker version with animation
+//g++ -std=c++17 -Iinclude main.cpp Segment.cpp -o human_walker -lpthread && ./human_walker
+
+
+//SFML version:
+// g++ main_sfml.cpp Human.cpp BodyPart.cpp HumanBuilder.cpp Segment.cpp Point.h -lsfml-graphics -lsfml-window -lsfml-system -o walker_anim && ./walker_anim
